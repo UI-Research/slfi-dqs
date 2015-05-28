@@ -1,0 +1,487 @@
+
+
+	
+
+
+
+
+	
+
+
+
+
+	
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>State &amp; Local Finance Data Query System (SLF-DQS)</title>
+<script type="text/javascript" src="CFIDE/scripts/cfform.js"></script>
+<script type="text/javascript" src="CFIDE/scripts/masks.js"></script>
+<script type="text/javascript">
+<!--
+    function  _CF_checkDATAPAGE(_CF_this)
+    {
+        //reset on submit
+        _CF_error_exists = false;
+        _CF_error_messages = new Array();
+        _CF_error_fields = new Object();
+        _CF_FirstErrorField = null;
+
+
+        //display error messages and return success
+        if( _CF_error_exists )
+        {
+            if( _CF_error_messages.length > 0 )
+            {
+                // show alert() message
+                _CF_onErrorAlert(_CF_error_messages);
+                // set focus to first form error, if the field supports js focus().
+                if( _CF_this[_CF_FirstErrorField].type == "text" )
+                { _CF_this[_CF_FirstErrorField].focus(); }
+
+            }
+            return false;
+        }else {
+            return true;
+        }
+    }
+//-->
+</script>
+</head>
+
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+		
+		
+		
+
+
+
+
+	
+		
+		
+		
+		
+		
+			
+			
+		
+
+	
+
+
+	
+
+
+	
+
+
+	
+
+
+	
+
+
+	
+
+
+	
+
+
+
+
+
+<!-- Script Name: cf_setvariables.cfm                                                  -->
+<!-- Purpose: create variable and value arrays from form fields                        -->
+<!-- Note: These arrays are GLOBAL in scope. Any form variable passes                  -->
+
+
+
+	
+	
+
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+		
+	
+	
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	
+	<title> </title>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+
+	
+	<style type="text/css" media="screen">@import "styles/salgar.css";</style>
+	<style type="text/css" media="screen">@import "styles/salgar_tabs.css";</style>
+	<style type="text/css" media="print">@import "styles/noprint_footer.css";</style>
+
+	
+	<script language="javascript">
+		
+
+
+
+		// Change status bar text
+	   function StatusBarText(msg){
+			window.status=msg;
+	   }
+
+
+	  // submit this form and go backwards from either button or tab
+	  // parameter p = desination
+	  function submitFromTabPrev(p){
+		document.DATAPAGE.BTNSELECTED.value="<<Back";
+		document.DATAPAGE.THISPAGE.value=p;
+		document.DATAPAGE.LASTPAGE.value='intro';
+		document.DATAPAGE.PAGE.value="<< back";
+		window.document.DATAPAGE.submit();
+		return true;
+
+	  }
+
+	  // submit this form and go forward from either button or tab
+	  // parameter p = desination
+	  function submitFromTabNext(p){
+		document.DATAPAGE.THISPAGE.value=p;
+		document.DATAPAGE.LASTPAGE.value='intro';
+		document.DATAPAGE.BTNSELECTED.value="Next >>";
+		window.document.DATAPAGE.submit();
+		return true;
+	}
+
+	//data checking code goes here
+	function beforeYouSubmit()
+	{
+
+		return true;
+
+
+
+
+	}
+
+		//////////////////////////////////////////////////////
+		//Function subHelpForm
+		//Purpose: submit help form
+		//parameters: p=page name
+		//////////////////////////////////////////////////////
+		function subHelpForm(p)
+		{
+                        var w = window.open (p, "win", "height=700,width=550,titlebar='NO',location='NO',menubar='NO',resizable='NO',scrollbars=1,status='NO',toolbar='NO'");
+
+		}
+
+
+
+	</script>
+</head>
+
+<body>
+	
+	<style type="text/css" media="print">
+div#pageheader { display: none; }
+</style>
+
+
+
+<div id=pageheader>
+	<table cellspacing="0" cellpadding="0" border="0" width="90%" >
+  		<tr valign="top">
+    		<td valign="top" height="61">
+       			<div class="banner">
+
+				<a href="http://www.taxpolicycenter.org/stateandlocal/index.cfm" name="The State and Local Finance Initiative of the Tax Policy Center"><img src="images/sal_header.jpg" height="63" width="802" border="0"  alt="The State and Local Finance Initiative of the Tax Policy Center" /></a>
+
+				</div>
+			</td>
+		</tr>
+	</table>
+</div>
+
+
+
+
+	<br /><br />
+	
+	
+<style type="text/css" media="print">
+div#header { display: none; }
+</style>
+
+
+<div id="header">
+	<ul id="primary">
+	
+		
+			
+					<li><span>intro</span></li>
+			
+		
+			
+				
+					
+							<li><a href="index.html#" onClick="return submitFromTabNext('level');">select level</a></li>
+					
+				
+			
+		
+			
+				
+					
+							<li><a href="index.html#" onClick="return submitFromTabNext('state');">select state</a></li>
+					
+				
+			
+		
+			
+				
+					
+							<li><a href="index.html#" onClick="return submitFromTabNext('series');">select series</a></li>
+					
+				
+			
+		
+			
+				
+					
+							<li><a href="index.html#" onClick="return submitFromTabNext('years');">select years</a></li>
+					
+				
+			
+		
+			
+				
+					
+							<li><a href="index.html#" onClick="return submitFromTabNext('units');">select units</a></li>
+					
+				
+			
+		
+			
+				
+					
+							<li><a href="index.html#" onClick="return submitFromTabNext('results');">view results</a></li>
+					
+				
+			
+		
+	 </ul>
+</div>
+
+
+
+	
+	<div id="main">
+		<div id="contents">
+
+			<center>
+
+			
+			
+
+			<form name="DATAPAGE" action="pages.cfm" method="post" onsubmit="return beforeYouSubmit(this)">
+			<table width="90%"  cellpadding="0" cellspacing="0" border="0">
+				<tr>
+					<td colspan="2" >
+
+						
+						<input type="hidden" name="LASTPAGE" value="0">
+						<input type="hidden" name="THISPAGE" value="intro">
+						<input type="hidden" name="NEXTPAGE" value="level">
+						<input type="hidden" name="BTNSELECTED">
+
+						
+						
+						
+
+
+<h1>
+<center>
+State & Local Finance Data Query System (SLF-DQS)<br>
+</center>
+</h1>
+
+
+<table>
+<tr>
+<td>
+<img src="http:./images/mapquarters.jpg" border="0"/></a>
+</td>
+<td valign="bottom">
+
+<p>This system allows flexible presentation of data from the Census of Governments State and Local Finance series. That series contains detailed revenue, expenditure and debt variables for the United States, each of the 50 states, and the District of Columbia for 1977-2012. The data are available by type of government: state, local, state and local totals, and local government detail. All data presented are state aggregates of finance data for the selected level of government. Users can view the data along different dimensions, in real or nominal dollars, and on a per capita or fraction of personal income, general revenues or total expenditures basis. This tool is useful for comparative, single state, or time series analysis.</p>
+</td>
+</tr>
+</table>
+
+<p><i>To Use:</i> <strong>Click on "Create a Table!" to begin making tables. On each tab, select desired options and click on "Next >>". If you need help, click on the ? box buttons. If you experience any problems or have comments or suggestions, please email <a href="mailto:slfdqs@ui.urban.org?subject=slf-dqs inquiry">slfdqs@ui.urban.org</a></strong><p>
+
+<center>
+
+<!-- <a href="javascript:submitFromTabNext('level')">Create a Table!</a> -->
+<input class="btn" name="NextBtn" type="submit" value="Create a Table!" onClick="return submitFromTabNext('level');">
+
+<br><br>
+
+<!-- <a href="./help/premade.html"> Pre-Made Tables </a> -->
+
+<a href="http://www.taxpolicycenter.org/stateandlocal/data/index.cfm">Pre-Made Tables</a>
+<br><br>
+
+<a href="help/data.html"> Data Definitions </a>
+
+<br><br>
+
+<a href="help/technical.html">Technical Appendix</a>
+
+<br><br>
+
+<a href="help/links.html">External Links</a>
+
+<br><br>
+</center>
+
+<p><b>Caution</b>: Queries involving a large combination of states, years and variables will be presented in a standard format to deal with a large number of data points. Smaller queries (less than 600 data points) will allow the user to modify and customize tables. To obtain the entire set of State and Local Government Finance data, please visit <a href="http://www.census.gov/govs/financegen/index.html" target="_blank">http://www.census.gov/govs/financegen/index.html</a></p>
+
+
+
+
+
+
+
+
+					</td>
+				</tr>
+
+
+				<tr>
+					<td align="left">
+							<br>
+
+					</td>
+					<td align="right">
+							<br>
+					</td>
+				</tr>
+
+
+
+				<tr>
+					<td align="left">
+
+							&nbsp;
+
+
+					</td>
+					<td align="right">
+
+							<input class="btn" name="NextBtn" type="submit" value="Create a Table!" onClick="return submitFromTabNext('level');">
+
+					</td>
+				</tr>
+			</table>
+			</center>
+		</FORM>
+
+		</div>
+	</div>
+
+
+
+
+
+<div id="tpcfooter">
+ &copy; <a href="http://www.urban.org/">Urban Institute</a>, <a href="http://www.brookings.edu">Brookings Institution</a>, and individual authors, 2013.
+                <a href="http://www.taxpolicycenter.org/aboutus/help/sitemap.cfm">Site Map</a>  |
+<a href="http://www.taxpolicycenter.org/aboutus/privacy.cfm">Privacy Policy</a>  | <a href="http://www.taxpolicycenter.org/aboutus/support.cfm">Support TPC</a> | <a href="http://www.taxpolicycenter.org/aboutus/contact.cfm">Contact Us</a>
+</div>
+
+
+					</td>
+				</tr>
+
+				
+				<tr>
+					<td align="left">
+							<br>
+					</td>
+					<td align="right">
+							<br>
+					</td>
+				</tr>
+
+				
+
+				<tr>
+					<td align="left">
+						<div id="footera">
+						
+							&nbsp;
+						
+						</div>
+					</td>
+					<td align="right">
+						<div id="footerb">
+						
+							&nbsp;
+						
+							
+						
+						</div>
+					</td>
+				</tr>
+			</table>
+			</center>
+		</form>
+
+		</div>
+
+
+
+
+	</div>
+	
+	
+	
+</body>
+</html>
+
+
