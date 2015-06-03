@@ -34,6 +34,7 @@ body {
     color: #333;
     padding: 1em 20px 3em 20px;
     margin: 0 auto;
+    overflow-x: hidden;
 }
 
 a {
@@ -137,6 +138,7 @@ input.btn:hover {
 
 .banner {
     position: relative;
+    display: block;
     left: 500em;
     padding-top:20px;
     padding-bottom:50px;
