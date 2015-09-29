@@ -128,8 +128,8 @@ input.btn:hover {
 
 #pageheader {
     background-color: #efefef;
-    width: 999em;
-    left: -500em;
+    width: 200%;
+    left: -50%;
     position: relative;
     margin-top:20px;
     display:block;
@@ -139,7 +139,7 @@ input.btn:hover {
 .banner {
     position: relative;
     display: block;
-    left: 500em;
+    left: 25%;
     padding-top:20px;
     padding-bottom:50px;
     width:900px;
